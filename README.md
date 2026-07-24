@@ -1,38 +1,19 @@
-# senagamedeals_hub
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
 # 🎮 Senagamedeals Hub
 
-Aplikasi mobile berbasis Flutter untuk mencari dan melihat promo game terbaik dari berbagai platform menggunakan CheapShark API. Aplikasi ini juga dilengkapi fitur autentikasi, wishlist, review game, dan dashboard statistik yang terhubung dengan Laravel REST API.
+Aplikasi mobile berbasis Flutter yang digunakan untuk mencari dan melihat promo game terbaik dari berbagai platform menggunakan CheapShark API. Aplikasi ini juga dilengkapi fitur Login, Register, Wishlist, Review Game, dan Dashboard Statistik yang terhubung dengan Laravel REST API.
 
 ---
 
 ## 📱 Fitur Utama
 
-- 🔐 Login & Register User
+- 🔐 Login & Register
 - 🎮 Menampilkan daftar game promo
 - 🔍 Pencarian game
 - ❤️ Wishlist Game
 - ⭐ Review dan Rating Game
-- 📊 Dashboard Statistik
 - 👤 Profil Pengguna
 - 🌐 Integrasi REST API Laravel
-- 💾 Penyimpanan data ke MySQL
+- 💾 Penyimpanan data menggunakan MySQL
 
 ---
 
@@ -45,7 +26,6 @@ Aplikasi mobile berbasis Flutter untuk mencari dan melihat promo game terbaik da
 ### Backend
 - Laravel 10
 - REST API
-- Sanctum Authentication
 
 ### Database
 - MySQL
@@ -55,7 +35,7 @@ Aplikasi mobile berbasis Flutter untuk mencari dan melihat promo game terbaik da
 
 ---
 
-# 📸 Tampilan Aplikasi
+# 📸 Cuplikan Layar (Screenshots)
 
 ## Splash Screen
 
@@ -79,6 +59,19 @@ Aplikasi mobile berbasis Flutter untuk mencari dan melihat promo game terbaik da
 
 ![Home Screen](assets/images/1.jpeg)
 
+---
+
+## Wishlist Screen
+
+![Wishlist Screen](assets/images/wishlist.jpeg)
+
+---
+
+## Review Screen
+
+![Review Screen](assets/images/review.jpeg)
+
+---
 
 # 📂 Struktur Project
 
@@ -86,28 +79,32 @@ Aplikasi mobile berbasis Flutter untuk mencari dan melihat promo game terbaik da
 lib/
 │
 ├── models/
-├── services/
 ├── screens/
+├── services/
 ├── widgets/
 ├── main.dart
 │
-backend/
+assets/
 │
-├── app/
-├── routes/
-├── database/
-├── public/
-└── .env
+├── images/
+│   ├── awal.jpeg
+│   ├── login.jpeg
+│   ├── register.jpeg
+│   ├── 1.jpeg
+│   ├── wishlist.jpeg
+│   └── review.jpeg
+│
+pubspec.yaml
 ```
 
 ---
 
-# 🚀 Cara Menjalankan Project
+# 🚀 Cara Clone dan Menjalankan Project
 
-## 1. Clone Repository
+### 1. Clone Repository
 
 ```bash
-git clone https://github.com/USERNAME/senagamedeals_hub.git
+git clone https://github.com/garnezabima/senagamedeals_hub.git
 ```
 
 Masuk ke folder project:
@@ -118,7 +115,7 @@ cd senagamedeals_hub
 
 ---
 
-## 2. Install Dependency Flutter
+### 2. Install Dependency
 
 ```bash
 flutter pub get
@@ -126,15 +123,15 @@ flutter pub get
 
 ---
 
-## 3. Konfigurasi API
+### 3. Konfigurasi API
 
 Buka file:
 
-```dart
+```bash
 lib/services/api_service.dart
 ```
 
-Pastikan Base URL sesuai:
+Pastikan Base URL mengarah ke server Laravel:
 
 ```dart
 class ApiService {
@@ -145,7 +142,7 @@ class ApiService {
 
 ---
 
-## 4. Jalankan Aplikasi
+### 4. Jalankan Aplikasi
 
 ```bash
 flutter run
@@ -162,6 +159,13 @@ flutter run
 | POST | /register |
 | POST | /login |
 | POST | /logout |
+
+### Contoh
+
+```http
+POST /api/register
+POST /api/login
+```
 
 ---
 
@@ -191,7 +195,7 @@ flutter run
 
 # 📊 Database
 
-Database menggunakan MySQL dengan beberapa tabel utama:
+Database menggunakan MySQL dengan tabel utama:
 
 - users
 - wishlists
@@ -202,8 +206,7 @@ Database menggunakan MySQL dengan beberapa tabel utama:
 
 # 👨‍💻 Developer
 
-**Garneza Bima Priambada**
-
+**Garneza Bima Priambada**  
 Teknik Informatika  
 Universitas Duta Bangsa Surakarta
 
